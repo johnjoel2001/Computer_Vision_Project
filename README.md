@@ -24,6 +24,11 @@
 ## Introduction
 This project analyzes histopathology images of breast tumor tissue to determine whether a sample is benign or malignant. It uses the [BreakHis dataset](https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/) and demonstrates different classification techniques, including simple thresholding methods, traditional machine learning models, and more advanced deep learning architectures.
 
+The workflow diagram below (created using Mermaid) illustrates the complete project workflow. Since the model files were too large, we stored them in an S3 bucket and load them in real time for real-time inference on our Streamlit app. In the app, a user can upload an image, select a model, and run the inference.
+
+![Workflow](https://github.com/user-attachments/assets/0f83cb5e-9e0b-4b39-984c-071c91d717ff)
+
+
 ---
 
 ## Dataset
@@ -117,6 +122,28 @@ A Dense layer with softmax activation converts the fused feature vector into cla
 
 ---
 
+## Explainability
+
+To enhance the novelty of our approach, we incorporated interpretability techniques such as LIME (Local Interpretable Model-agnostic Explanations) and Integrated Gradients to gain a deeper understanding of which pixels contribute most significantly to the final decision-making process of our model.
+
+LIME helps by approximating the model’s behavior locally, generating perturbations of the input and analyzing how predictions change in response to those modifications. This enables us to identify which regions of the image are truly influencing the model’s output. Similarly, Integrated Gradients attribute importance to input features by computing the gradients of the prediction with respect to the input, providing a more holistic view of how different pixels contribute to the decision.
+
+Through these techniques, we discovered an intriguing phenomenon: even the best-performing models occasionally assigned importance to random background pixels, suggesting potential biases or spurious correlations within the model’s learning process. This highlighted the importance of interpretability tools in evaluating model reliability.
+
+By leveraging these techniques, we ensure greater accountability in our approach. Rather than treating model decisions as black-box outputs, we can scrutinize how and why the model reaches its conclusions. This is particularly crucial in high-stakes applications, where understanding model reasoning can prevent erroneous or biased decision-making.
+
+---
+
 ## Usage
 
 Streamlit App Link: 
+
+---
+
+## Ethics Statement
+
+We recognize the importance of safeguarding patient privacy and ensuring responsible use of medical data. All histopathology images in this project come from publicly available, anonymized sources, and they are used strictly for research and educational purposes. This work is not a substitute for clinical diagnosis or professional medical advice. Medical practitioners should rely on clinical expertise, laboratory testing, and standard diagnostic procedures when making any healthcare decisions. Our goal is to advance understanding of breast cancer detection methods in a manner that respects patient dignity, maintains scientific rigor, and adheres to ethical guidelines.
+
+
+
+
