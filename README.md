@@ -122,6 +122,11 @@ A Dense layer with softmax activation converts the fused feature vector into cla
 4. **Fit** on training data and validate on a separate split.
 5. **Model Saving** in TensorFlow’s SavedModel format.
 
+The following is the architecture diagram generated using Mermaid, illustrating the high-level flow.
+
+![image](https://github.com/user-attachments/assets/2e992965-bac4-4082-89bd-fbe6b474c2ce)
+
+
 ---
 
 ## Explainability
