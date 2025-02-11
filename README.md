@@ -17,7 +17,9 @@
     - [8. Final Classification](#8-final-classification)
     - [9. Model Construction](#9-model-construction)
     - [10. Training Process](#10-training-process)
-- [Installation and Usage](#installation-and-usage)
+- [Explainability][#Explainability]
+- [Usage](#Usage)
+- [Ethics Statement](#Ethics Statement)
 
 ---
 
@@ -135,6 +137,9 @@ By leveraging these techniques, we ensure greater accountability in our approach
 ---
 
 ## Usage
+You could run each script individually, going through them one by one. First, you would execute make_datasets.py to source the dataset from Kaggle, ensuring you provide your Kaggle API credentials. Next, you would run process_datasets.py to preprocess the data. Following that, you would execute the individual model scripts—all with simple Python commands. However, this approach can be quite time-consuming.
+
+Instead, we highly recommend checking out our beautiful demo to experience the final product firsthand. This will give you a clear understanding of how everything comes together. From there, you can use our scripts as a reference and build your own version from scratch, tailoring it to your needs!
 
 Streamlit App Link: 
 
