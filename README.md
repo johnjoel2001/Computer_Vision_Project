@@ -139,6 +139,10 @@ Through these techniques, we discovered an intriguing phenomenon: even the best-
 
 By leveraging these techniques, we ensure greater accountability in our approach. Rather than treating model decisions as black-box outputs, we can scrutinize how and why the model reaches its conclusions. This is particularly crucial in high-stakes applications, where understanding model reasoning can prevent erroneous or biased decision-making.
 
+The image below is an illustration of an actual malignant image being correctly classified, along with the corresponding LIME explanations.
+
+![image](https://github.com/user-attachments/assets/56b2318e-8cd9-4044-82a9-e6958e7e1379)
+
 ---
 
 ## Usage
@@ -146,7 +150,7 @@ You could run each script individually, going through them one by one. First, yo
 
 Instead, we highly recommend checking out our beautiful demo to experience the final product firsthand. This will give you a clear understanding of how everything comes together. From there, you can use our scripts as a reference and build your own version from scratch, tailoring it to your needs!
 
-Streamlit App Link: 
+[Streamlit App Link](https://appapp-yfceysvaqnof9ffj7bd76p.streamlit.app/)
 
 ---
 
